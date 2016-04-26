@@ -15,5 +15,6 @@ RUN ["mvn", "verify"]
 ADD src /code/src
 RUN ["mvn", "package"]
 
+# Expose port 4567
 EXPOSE 4567
 CMD ["/usr/lib/jvm/java-8-openjdk-amd64/bin/java", "-jar", "target/spark-jar-with-dependencies.jar"]
