@@ -11,7 +11,7 @@ Simple Spark example build with Docker.
 At root directory, run:
 
 ```sh
-docker build -t spark .
+docker build -t filipecorrea/spark .
 ```
 
 This will take a while for the first time since it downloads and installs Maven and downloads all the project’s dependencies. Every subsequent start of this build will only take a few seconds, as again everything will be already cached.
@@ -21,7 +21,7 @@ This will take a while for the first time since it downloads and installs Maven 
 Once the image is built, start it with:
 
 ```sh
-docker run -d -p 4567:4567 spark
+docker run -d -p 4567:4567 filipecorrea/spark
 ```
 
 And test it with:
